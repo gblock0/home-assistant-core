@@ -121,13 +121,19 @@ LIGHTS: dict[str, tuple[TuyaLightEntityDescription, ...]] = {
         TuyaLightEntityDescription(
             key=DPCode.SWITCH_LED,
             color_mode=DPCode.WORK_MODE,
-            brightness=DPCode.BRIGHT_VALUE,
+            brightness=DPCode.BRIGHT_VALUE_1,
             color_temp=DPCode.TEMP_VALUE,
             color_data=DPCode.COLOUR_DATA,
+            name="LED Light",
         ),
         # Some ceiling fan lights use LIGHT for DPCode instead of SWITCH_LED
         TuyaLightEntityDescription(
             key=DPCode.LIGHT,
+            color_mode=DPCode.WORK_MODE,
+            brightness=DPCode.BRIGHT_VALUE,
+            color_temp=DPCode.TEMP_VALUE,
+            color_data=DPCode.COLOUR_DATA,
+            name="Light",
         ),
     ),
     # Ambient Light
